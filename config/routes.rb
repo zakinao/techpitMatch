@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   controllers: { registrations: 'registrations'}
   root 'top#index'
   resources :users, only: [:show, :index]
+  resources :reactions, only: [:create]
+  resources :matching, only: [:index]
 
 end
